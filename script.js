@@ -1,15 +1,19 @@
 let choices=document.querySelectorAll(".choice");
-let msg=document.querySelector("#msg")
+let msg=document.querySelector("#msg");
+let userscore=document.querySelector("#user-score");
+let compscore=document.querySelector("#comp-score");
 let showwiner=(userwin,userchoice,comp)=>{
     if(userwin){
         console.log("you win!");
         msg.style.backgroundColor="green";
         msg.innerText=`you win ${userchoice} beats ${comp}`;
+        userscore.innerText++;
     }
     else{
         console.log("you loose!");
         msg.style.backgroundColor="red";
         msg.innerText="you lose the game"
+        compscore.innerText++;
 }
 }
 let draw=()=>{
